@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "expo-android-locale-qualifiers",
+    "name": "Repro",
     "slug": "expo-android-locale-qualifiers",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,10 +15,33 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "com.example.repro"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "android": [
+              "en",
+              "fr",
+              "he",
+              "id",
+              "zh-Hans",
+              "zh-Hant"
+            ]
+          }
+        }
+      ]
+    ],
+    "locales": {
+      "fr": "./locales/fr.json",
+      "he": "./locales/he.json",
+      "id": "./locales/id.json"
     }
   }
 }
